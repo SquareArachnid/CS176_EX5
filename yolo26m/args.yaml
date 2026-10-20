@@ -1,18 +1,18 @@
 task: detect
 mode: train
 model: yolo26m.pt
-data: /content/data.yaml
+data: /content/dataset/data.yaml
 epochs: 100
 time: null
 patience: 100
-batch: 8
+batch: 16
 imgsz: 640
 save: true
 save_period: -1
 cache: false
 device: '0'
 workers: 8
-project: /content/drive/MyDrive/aquarium_runs
+project: pothole_detection
 name: yolo26m
 exist_ok: false
 pretrained: true
@@ -111,4 +111,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: tracktrack.yaml
-save_dir: /content/drive/MyDrive/aquarium_runs/yolo26m
+save_dir: /content/runs/detect/pothole_detection/yolo26m
